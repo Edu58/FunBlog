@@ -2,7 +2,7 @@ defmodule Funblog.Tags.Tag do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias FunBlog.Posts.Post
+  alias Funblog.Posts.Post
 
   schema "tags" do
     field(:title, :string)

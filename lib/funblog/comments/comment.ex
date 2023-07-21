@@ -2,8 +2,8 @@ defmodule Funblog.Comments.Comment do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias FunBlog.Posts.Post
-  alias FunBlog.Accounts.User
+  alias Funblog.Posts.Post
+  alias Funblog.Accounts.User
 
   schema "comments" do
     field(:content, :string)

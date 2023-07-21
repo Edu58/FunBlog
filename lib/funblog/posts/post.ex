@@ -2,10 +2,11 @@ defmodule Funblog.Posts.Post do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias FunBlog.Accounts.User
-  alias FunBlog.Tags.Tag
+  alias Funblog.Accounts.User
+  alias Funblog.Tags.Tag
 
   schema "posts" do
+    field(:image, :string)
     field(:content, :string)
     field(:title, :string)
     belongs_to(:user, User)
