@@ -64,10 +64,12 @@ defmodule FunblogWeb.Router do
 
     live_session :require_authenticated_user,
       on_mount: [{FunblogWeb.UserAuth, :ensure_authenticated}] do
-      live("/", HomeLive, :home)
-
       live("/users/settings", UserSettingsLive, :edit)
       live("/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email)
+
+      scope "/", HomeLive do
+        live("/", Index, :home)
+      end
     end
   end
 
